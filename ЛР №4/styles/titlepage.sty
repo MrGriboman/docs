@@ -1,0 +1,134 @@
+\RequirePackage{multicol}
+\RequirePackage{datetime}
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+\newcommand{\lasttwoofyear}[1]{% #1 is the offset
+  \expandafter\getlasttwo\number\numexpr\year+(#1)\relax\relax
+}
+\def\getlasttwo#1#2#3#4\relax{#3#4}
+
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or января% 1
+  \or февраля% 2
+  \or марта% 3
+  \or апреля% 4
+  \or мая% 5
+  \or июня% 6
+  \or июля% 7
+  \or августа% 8
+  \or сентября% 9
+  \or октября% 10
+  \or ноября% 11
+  \or декабря% 12
+  \fi}
+\newcommand{\uline}[1]{\underline{#1\vphantom{lp}}}
+
+
+
+\newdateformat{mydate}{<<\underline{~\twodigits{\THEDAY}~}>>{ }\underline{~\MONTH~}{ }20\underline{~\lasttwoofyear{0}~}г.}
+
+\newcommand{\textunderset}[2]{\begin{tabular}[t]{@{}c@{}}#2\\[-12pt]\scriptsize#1\end{tabular}}
+
+\newcommand{\usersign}[1]{
+    \textunderset{\textit{(Ф.И.О.)}}{\uline{#1}}
+    \textunderset{\textit{подпись}}{\uline{\hspace{80pt}}}
+}
+
+\newcommand{\fefutitlepage}[5]{
+
+    
+    \thispagestyle{empty}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{pics/fefulogo.pdf}
+    \end{figure}
+
+    \vspace*{-32pt}
+
+    \begin{center}
+
+        {\fontsize{11}{11}\selectfont МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}
+
+        \vspace*{-12pt}
+    
+        {\fontsize{11}{11}\selectfont Федеральное государственное автономное образовательное учреждение высшего образования}
+    
+        \vspace*{-10pt}
+    
+        \textbf{<<Дальневосточный федеральный университет>>}
+    
+        \vspace*{-10pt}
+    
+        (ДВФУ)
+
+        \vspace*{-10pt}
+
+        \rule{\textwidth}{3pt}
+        
+        \vspace*{-24pt}
+
+        \rule{\textwidth}{1pt}
+
+        \vspace{10pt}
+
+        \textbf{ИНСТИТУТ МАТЕМАТИКИ И КОМПЬЮТЕРНЫХ ТЕХНОЛОГИЙ}
+
+        \textbf{(ШКОЛА)}
+
+        \vspace{10pt}
+
+        \textbf{Департамент математического и компьютерного моделирования}
+
+        \vspace{20pt}
+        
+        \textbf{#1}
+
+        \vspace{15pt}
+        
+        #2
+
+        \vspace{10pt}
+
+        Направление подготовки
+
+        \vspace*{-6pt}
+
+        #3
+
+    \end{center}
+
+    \begin{multicols}{2}
+        
+        \vfill\null
+
+        \columnbreak
+
+        Выполнил студент гр.
+
+        #4
+
+        \usersign{#5}
+
+        \mydate\today
+
+
+    \end{multicols}
+
+    \vfill
+
+    \begin{center}
+
+        \textbf{г. Владивосток}
+
+        \textbf{2023}
+
+    \end{center}
+
+    \pagebreak
+
+}

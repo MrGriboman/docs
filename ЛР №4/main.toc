@@ -1,0 +1,14 @@
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {1}Введение}{3}{section.1}%
+\contentsline {section}{\numberline {2}Задание 1: Дать характеристику и найти общее решение}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Постановка задачи}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Решение}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Задание 2: Решить задачи Коши}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Постановка задачи}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Решение}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Задание 3: Решение уравнения методом Эйлера}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Постановка задачи}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Решение}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Заключение: Рецепт шарлотки}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Вам понадобятся:}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Процесс приготовления:}{12}{subsection.5.2}%
